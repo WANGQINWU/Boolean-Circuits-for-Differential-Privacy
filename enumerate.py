@@ -49,8 +49,14 @@ def getSequence(X,R,Sequence):
 def getMUX(X,OR,AND):
     MUX = If(X==False,OR,AND)
     return MUX
-##############
 
+#define probability
+def probability(total, truecount, falsecount, n):
+
+    if(truecount==falsecount):
+        print "lie probability for true or false is:"
+        print Q(falsecount,n**2)
+##############
 if(len(sys.argv)<2):
     print "plz enter length for OR and AND chain"
     sys.exit()
@@ -78,9 +84,45 @@ MUX=getMUX(X,OR,AND)
 print MUX
 
 s=Solver()
+#solve when it lies
 s.add(MUX==Y,Y==Not(X))
-s.check()
-m=s.model()
-print m
+
+total=0
+tLiecount=0
+fLiecount=0
+#s.add(Or(R[0]!=m[R[0]],R[1]!=m[R[1]],X!=m[X]))
+#print s.check()
+#m=s.model()
+
+
+while s.check() == sat:
+    s.check()
+    total += 1
+    m=s.model()
+    print
+    #to get multiple solutions and avoid get the same solution all the time
+    ORsol= Or([R[i] != m[R[i]] for i in range(len(R))])
+    ORsol=Or(ORsol,X!=m[X])
+    #print ORsol
+    print "solution:"
+    print m
+    #count lie in when x is true or false
+    if m[X]==False:
+        fLiecount += 1
+    else:
+        tLiecount += 1
+    print "count of lie:"
+    print total
+    s.add(ORsol)
+
+#print tLiecount
+#print n**2
+print float(total)/(n+1)**2
+
+probability(total,tLiecount,fLiecount,n)
+
+
+
+
 
 
