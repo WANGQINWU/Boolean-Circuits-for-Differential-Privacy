@@ -41,15 +41,15 @@ def getSequence(X,R,Sequence):
     chain_one = X
     chain_two = X
 
-    for i,s in enumarte(Sequence):
+    for i,s in enumerate(Sequence):
         if s == 0:
             chain_one=Or(chain_one,R[i])
-            chain_two=AND(chain_two,R[i])
+            chain_two=And(chain_two,R[i])
         else:
-            chain_one=AND(chain_one,R[i])
-            chain_two=OR(chain_two,R[i])
+            chain_one=And(chain_one,R[i])
+            chain_two=Or(chain_two,R[i])
 
-    return [chain_one,chain_two]
+    return (Not(chain_one),Not(chain_two))
 
 #Selector
 def getMUX(X,OR,AND):
@@ -61,15 +61,19 @@ def probability(total, truecount, falsecount, n):
 
     if(truecount==falsecount):
         print "lie probability for true or false is:"
-        print Q(falsecount,n**2)
+        print
+        print Q(falsecount,2**n)
 ##############
 if(len(sys.argv)<2):
     print "plz enter length for OR and AND chain"
     sys.exit()
 
 #print (type(sys.argv[1]))
-n=int(sys.argv[1])
-print type(n)
+
+seq=[int(s) for s in sys.argv[1].split(',')]
+print seq
+n=len(seq)
+#print type(n)
 
 #Random Ri
 R = [ Bool('r%s' % i) for i in range(n) ]
@@ -82,11 +86,10 @@ print R
 #input X, and output Y
 X,Y = Bools('x y')
 
-OR=getOR(X,R,n)
-
-AND=getAND(X,R,n)
+OR,AND= getSequence(X,R,seq)
 
 MUX=getMUX(X,OR,AND)
+print "MUX"
 print MUX
 
 s=Solver()
@@ -109,7 +112,7 @@ while s.check() == sat:
     #to get multiple solutions and avoid get the same solution all the time
     ORsol= Or([R[i] != m[R[i]] for i in range(len(R)) if m[R[i]]==True or m[R[i]]==False])
     ORsol=Or(ORsol,X!=m[X])
-    
+
     print ORsol
     print "solution:"
     print m
@@ -124,10 +127,9 @@ while s.check() == sat:
     #for c in s.assertions():
     #    print c
     print "-----"
-
 #print tLiecount
 #print n**2
-print float(total)/(n+1)**2
+print float(total)/2**(n+1)
 
 probability(total,tLiecount,fLiecount,n)
 
