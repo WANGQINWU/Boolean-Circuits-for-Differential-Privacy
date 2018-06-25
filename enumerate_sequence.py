@@ -1,7 +1,10 @@
 from z3 import *
 import sys
 
-#usage: python filename.py n
+#usage: python filename.py 0,1,0,....
+#                       x->or and or ...-|
+#                                        |->Not()->>
+#                       x->and or and...-|
 # n is number of OR and AND chain size
 #result: return synatic of bc with n OR and AND
 
