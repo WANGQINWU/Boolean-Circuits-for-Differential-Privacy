@@ -4,13 +4,15 @@ from BC_Stat import BCStat
 
 class BcSequence(BCStat):
     r = []
+    # input x and output y
+    x, y = Bools('x y')
 
-    def __init__(self, sequence, x, y):
+    def __init__(self, sequence):
         self._sequence = sequence
         self._length = len(self._sequence)
         self.r = self.getri()
-        self._output_bc = self.producebc(x, y)
-        self._bc = self.for_lie(self._output_bc,x, y)
+        self._output_bc = self.producebc()
+        self._bc = self.for_lie(self._output_bc)
 
     def getri(self):
 
@@ -19,9 +21,9 @@ class BcSequence(BCStat):
         return self.r
 
     # Sequence
-    def producebc(self, x, y):
-        chain_one = x
-        chain_two = x
+    def producebc(self):
+        chain_one = self.x
+        chain_two = self.x
 
         for i, s in enumerate(self._sequence):
             if s == 0:
@@ -34,29 +36,36 @@ class BcSequence(BCStat):
         chain_one = Not(chain_one)
         chain_two = Not(chain_two)
 
-        bc = self.getmux(x, chain_one, chain_two)
+        bc = self.getmux(chain_one, chain_two)
 
-        return bc == y
+        return bc == self.y
 
-    def for_lie(self, bc, x, y):
-        return bc, y != x
+    def for_lie(self, bc):
+        return bc, self.y != self.x
 
     # Selector
-    def getmux(self, x, chain_one, chain_two):
-        mux = If(x == False, chain_one, chain_two)
+    def getmux(self, chain_one, chain_two):
+        mux = If(self.x == False, chain_one, chain_two)
         return mux
 
     def getbc(self):
         return self._bc
 
-    def get_output_with_random(self, x, input_of_bc, random):
+    def get_output_with_random(self, input_of_bc, random):
         s = Solver();
         s.add(self._output_bc)
         constraints = And([self.r[i] == self.transform_num(random[i]) for i in range(len(random))])
-        constraints = And(constraints, x == input_of_bc)
+        constraints = And(constraints, self.x == self.transform_num(input_of_bc))
         s.add(constraints)
         s.check()
         if s.check() == sat:
-            return s.model()
+            return s.model()[self.y]
         else:
             return 'error'
+
+    def get_outputs(self, intputs_of_bc, randomizer):
+        output = []
+        for i in intputs_of_bc:
+            output.append(self.get_output_with_random(intputs_of_bc[i], randomizer.get_random_seq()))
+
+        return output

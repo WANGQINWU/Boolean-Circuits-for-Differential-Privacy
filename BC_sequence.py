@@ -18,22 +18,24 @@ if len(sys.argv) < 2:
     print "plz enter length for OR and AND chain"
     sys.exit()
 
-# print (type(sys.argv[1]))
-
+# print type(sys.argv[1])
 
 seq = [int(s) for s in sys.argv[1].split(',')]
-print seq
+# print seq
 
 # input X, and output Y
-x, y = Bools('x y')
 
-bcSequence = BcSequence(seq, x, y)
+bcSequence = BcSequence(seq)
 
 bc = bcSequence.getbc()
 print bc
+print
 
-bcSequence.find_solution(x, bc)
+bcSequence.find_solution(bc)
 bcSequence.find_probability()
 
-output = bcSequence.get_output_with_random(x, True, [0, 0, 0])[y]
+random = [0, 0, 1]
+input = 0
+output = bcSequence.get_output_with_random(input, random)
+print 'output with input 0 and random [0, 0, 1]'
 print bcSequence.transform_bool(output)

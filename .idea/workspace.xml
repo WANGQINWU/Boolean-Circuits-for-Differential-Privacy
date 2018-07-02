@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff23757c-a8e2-4a8b-9ed2-4e7379033332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/enumerate_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/enumerate_sequence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Randomised Reponse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/randomize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooleanCircuit/BC.py" beforeDir="false" afterPath="$PROJECT_DIR$/BooleanCircuit/BC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" beforeDir="false" afterPath="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enumerate_sequence copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/BC_sequence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,15 +17,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$enumerate_sequence_copy.coverage" NAME="enumerate_sequence copy Coverage Results" MODIFIED="1530544199364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$BC_sequence.coverage" NAME="BC_sequence Coverage Results" MODIFIED="1530547092101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$enumerate_sequence_copy.coverage" NAME="RR Coverage Results" MODIFIED="1530549261918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="enumerate_sequence copy.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/enumerate_sequence copy.py">
+      <file leaf-file-name="BC_sequence.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BC_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="422">
+              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -28,11 +34,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Randomised Reponse.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="randomize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/randomize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BC.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="272">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -43,8 +70,8 @@
       <file leaf-file-name="BC_Stat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="344">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -61,6 +88,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>OR</find>
+      <find>x</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,9 +100,13 @@
         <option value="$PROJECT_DIR$/enumerate_sequence.py" />
         <option value="$PROJECT_DIR$/BooleanCircuit/Stat.py" />
         <option value="$PROJECT_DIR$/BooleanCircuit/BCStat.py" />
-        <option value="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" />
-        <option value="$PROJECT_DIR$/BooleanCircuit/BC.py" />
         <option value="$PROJECT_DIR$/enumerate_sequence copy.py" />
+        <option value="$PROJECT_DIR$/BC_sequence.py" />
+        <option value="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" />
+        <option value="$PROJECT_DIR$/randomizer.py" />
+        <option value="$PROJECT_DIR$/BooleanCircuit/BC.py" />
+        <option value="$PROJECT_DIR$/Randomised Reponse.py" />
+        <option value="$PROJECT_DIR$/randomize.py" />
       </list>
     </option>
   </component>
@@ -137,8 +169,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="enumerate_sequence copy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.RR">
+    <configuration name="BC_sequence" type="PythonConfigurationType" factoryName="Python">
+      <module name="Boolean-Circuits-for-Differential-Privacy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BC_sequence.py" />
+      <option name="PARAMETERS" value="0,1,0" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="RR" type="PythonConfigurationType" factoryName="Python">
       <module name="Boolean-Circuits-for-Differential-Privacy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,17 +202,16 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enumerate_sequence copy.py" />
-      <option name="PARAMETERS" value="0,1,0" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Randomised Reponse.py" />
+      <option name="PARAMETERS" value="11111" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.enumerate_sequence copy" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Python.BC_sequence" />
+      <item itemvalue="Python.RR" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -181,11 +231,11 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50572914" side_tool="true" visible="true" weight="0.3550356" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50885415" side_tool="true" visible="true" weight="0.39877924" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49427083" visible="true" weight="0.3550356" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.490625" weight="0.3550356" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49895832" weight="0.32960325" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1640625" />
       <window_info anchor="right" id="R Packages" order="3" />
@@ -196,7 +246,7 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49635416" weight="0.39877924" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49114582" visible="true" weight="0.39877924" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -217,17 +267,18 @@
         <breakpoints-dialog />
       </breakpoints-dialog>
       <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
+        <breakpoint enabled="true" suspend="NONE" type="python-exception">
+          <properties notifyOnlyOnFirst="true" notifyOnTerminate="true" exception="BaseException">
             <option name="notifyOnTerminate" value="true" />
+            <option name="notifyOnlyOnFirst" value="true" />
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/enumerate_sequence copy.py">
+    <entry file="file://$PROJECT_DIR$/BC_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
@@ -274,27 +325,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
+    <entry file="file://$PROJECT_DIR$/BC_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="22" />
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/randomize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="272">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enumerate_sequence copy.py">
+    <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="377">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
