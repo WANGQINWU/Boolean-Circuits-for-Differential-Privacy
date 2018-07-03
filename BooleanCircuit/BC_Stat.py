@@ -16,7 +16,7 @@ class BCStat():
 
     def find_solution(self, bc, is_time=False):
 
-        print "start search"
+        # print "start search"
         s = Solver()
         s.add(bc)
 
@@ -65,7 +65,7 @@ class BCStat():
             #    print c
             # print "-----"
 
-        print "finished search solution"
+        # print "finished search solution"
         end = time.time()
         if is_time:
             self.time1 = end - start
@@ -91,10 +91,10 @@ class BCStat():
         # return Q(self.f_lie_count, 2 ** self._length)
         # return float(self.f_lie_count) / (2 ** self._length)
         if self.f_lie_count >= self.t_lie_count:
-            print self.f_lie_count
+            # print self.f_lie_count
             return float(self.f_lie_count) / (2 ** self._length)
         else:
-            print self.t_lie_count
+            # print self.t_lie_count
             return float(self.t_lie_count) / (2 ** self._length)
 
     def find_epsilon(self):

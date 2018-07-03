@@ -13,6 +13,7 @@ if len(sys.argv) < 2:
     exit(0)
 
 value = [int(i) for i in list(sys.argv[1])]
+print value
 
 # epsilon of differential privacy
 epsilon = math.exp(math.log(7))
@@ -31,8 +32,6 @@ for i in range(int(length_of_bc)):
 print seq
 
 bcSequence = BcSequence(seq)
-bc = bcSequence.getbc()
-print bc
 
 randomized_result = bcSequence.get_outputs(value, randomizer)
 print randomized_result

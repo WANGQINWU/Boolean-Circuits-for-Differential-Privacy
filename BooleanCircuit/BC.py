@@ -75,6 +75,7 @@ class BcSequence(BCStat):
         constraints = And(constraints, self.x == self.transform_num(input_of_bc))
         s.add(constraints)
         s.check()
+        print s.model()
         if s.check() == sat:
             return s.model()[self.y]
         else:
@@ -82,7 +83,10 @@ class BcSequence(BCStat):
 
     def get_outputs(self, intputs_of_bc, randomizer):
         output = []
-        for i in intputs_of_bc:
-            output.append(self.get_output_with_random(intputs_of_bc[i], randomizer.get_random_seq()))
-
+        for i in range(len(intputs_of_bc)):
+            random_seq = randomizer.get_random_seq()
+            output.append(self.get_output_with_random(intputs_of_bc[i], random_seq))
         return output
+
+    def get_out_bc(self):
+        return self._output_bc
