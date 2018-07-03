@@ -15,7 +15,7 @@ if len(sys.argv) < 2:
 value = [int(i) for i in list(sys.argv[1])]
 
 # epsilon of differential privacy
-epsilon = math.exp(math.log(3))
+epsilon = math.exp(math.log(7))
 
 length_of_bc = math.log(epsilon + 1, 2)
 randomizer = Randomize(int(length_of_bc))
