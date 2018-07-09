@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff23757c-a8e2-4a8b-9ed2-4e7379033332" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/BooleanCircuit/RRclass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/BC for DP-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/BC for DP-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BC for DP.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/BC for DP.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooleanCircuit/BC.py" beforeDir="false" afterPath="$PROJECT_DIR$/BooleanCircuit/BC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" beforeDir="false" afterPath="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Randomised Reponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Randomised Reponse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,17 +20,17 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$BC_sequence.coverage" NAME="BC_sequence Coverage Results" MODIFIED="1530617858049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$plot.coverage" NAME="plot Coverage Results" MODIFIED="1530630140838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$Boolean_Circuits_for_Differential_Privacy.coverage" NAME="Boolean-Circuits-for-Differential-Privacy Coverage Results" MODIFIED="1530646475339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$Boolean_Circuits_for_Differential_Privacy.coverage" NAME="Boolean-Circuits-for-Differential-Privacy Coverage Results" MODIFIED="1531141258765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$enumerate_sequence_copy.coverage" NAME="RR Coverage Results" MODIFIED="1530570663474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$RR.coverage" NAME="RR Coverage Results" MODIFIED="1530646436101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Boolean_Circuits_for_Differential_Privacy$RR.coverage" NAME="RR Coverage Results" MODIFIED="1531142909435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="plot_of_time.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_of_time.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="51" selection-start-line="36" selection-end-line="51" />
+            <state relative-caret-position="-73">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -35,10 +41,31 @@
       <file leaf-file-name="Randomised Reponse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="285">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="randomize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/randomize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RRclass.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BooleanCircuit/RRclass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +74,8 @@
       <file leaf-file-name="BC_sequence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BC_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="347">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="24" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -56,24 +83,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BC_Stat.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BC_Stat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+            <state relative-caret-position="213">
+              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
-                <element signature="e#97#287#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BC.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BC.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="536">
+              <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -113,10 +139,11 @@
         <option value="$PROJECT_DIR$/randomizer.py" />
         <option value="$PROJECT_DIR$/randomize.py" />
         <option value="$PROJECT_DIR$/plot_of_time.py" />
-        <option value="$PROJECT_DIR$/Randomised Reponse.py" />
-        <option value="$PROJECT_DIR$/BooleanCircuit/BC.py" />
-        <option value="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" />
         <option value="$PROJECT_DIR$/BC for DP.ipynb" />
+        <option value="$PROJECT_DIR$/BooleanCircuit/RRclass.py" />
+        <option value="$PROJECT_DIR$/BooleanCircuit/BC.py" />
+        <option value="$PROJECT_DIR$/Randomised Reponse.py" />
+        <option value="$PROJECT_DIR$/BooleanCircuit/BC_Stat.py" />
       </list>
     </option>
   </component>
@@ -230,7 +257,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Randomised Reponse.py" />
-      <option name="PARAMETERS" value="1100" />
+      <option name="PARAMETERS" value="110011001100" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -300,23 +327,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="62" width="1920" height="1009" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893504" weight="0.32894737" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021299" side_tool="true" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5250266" side_tool="true" visible="true" weight="0.3377193" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47603834" weight="0.3377193" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4978701" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49733758" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49947917" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47497338" visible="true" weight="0.3377193" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4978701" weight="0.32894737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17252396" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17571884" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.33599573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5601704" weight="0.39692983" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5601704" weight="0.39692983" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" sideWeight="0.49733758" weight="0.32894737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,6 +427,56 @@
     <entry file="file://$PROJECT_DIR$/plot_of_time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
+          <caret line="51" selection-start-line="36" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BC_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_of_time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
           <caret line="51" lean-forward="true" selection-start-line="36" selection-end-line="51" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -432,7 +510,6 @@
           <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#97#287#0" />
           </folding>
         </state>
       </provider>
@@ -490,7 +567,6 @@
           <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#97#287#0" />
           </folding>
         </state>
       </provider>
@@ -528,7 +604,6 @@
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#97#287#0" />
           </folding>
         </state>
       </provider>
@@ -688,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/randomize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enumerate_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -702,58 +770,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/BC for DP.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
+    <entry file="file://$PROJECT_DIR$/randomize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#97#287#0" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_of_time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="51" selection-start-line="36" selection-end-line="51" />
+        <state relative-caret-position="-73">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BC_sequence.py">
+    <entry file="file://$PROJECT_DIR$/BooleanCircuit/RRclass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state relative-caret-position="389">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Randomised Reponse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BC for DP.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="8" />
+    <entry file="file://$PROJECT_DIR$/BC_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="536">
+          <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BooleanCircuit/BC_Stat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

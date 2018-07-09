@@ -12,10 +12,12 @@ class BCStat():
         self.is_done = False
         self.time = 0
         self.time1 = 0
-        self.mutex = threading.Lock()
 
     def find_solution(self, bc, is_time=False):
-
+        self.total_count = 0
+        self.t_lie_count = 0
+        self.f_lie_count = 0
+        self.is_done = False
         # print "start search"
         s = Solver()
         s.add(bc)
@@ -47,7 +49,6 @@ class BCStat():
                 print orsol
                 print(e)
 
-
             # count lie in when x is true or false
             if not m[self.x]:
                 self.f_lie_count += 2 ** (self._length + 2 - len(m))
@@ -57,9 +58,7 @@ class BCStat():
             s.add(orsol)
 
             if s.check() == unsat:
-                self.mutex.acquire()
                 self.is_done = True
-                self.mutex.release()
 
             # for c in s.assertions():
             #    print c
@@ -117,3 +116,6 @@ class BCStat():
             return self.time
         else:
             return self.time1
+
+    def get_total(self):
+        return self.f_lie_count*2

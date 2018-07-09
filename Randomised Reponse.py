@@ -1,7 +1,6 @@
 import sys
-from BooleanCircuit.BC import BcSequence
+from BooleanCircuit.RRclass import RRclass
 from z3 import *
-from randomize import Randomize
 from math import *
 
 # accept value from user and return randomised value
@@ -13,25 +12,14 @@ if len(sys.argv) < 2:
     exit(0)
 
 value = [int(i) for i in list(sys.argv[1])]
+print "before"
 print value
 
 # epsilon of differential privacy
-epsilon = math.exp(math.log(7))
+epsilon = math.exp(math.log(3))
+RR = RRclass(epsilon)
 
-length_of_bc = math.log(epsilon + 1, 2)
-randomizer = Randomize(int(length_of_bc))
-
-print "length of boolean circuits is "
-print length_of_bc
-
-seq = []
-
-for i in range(int(length_of_bc)):
-    seq.append(0)
-
-print seq
-
-bcSequence = BcSequence(seq)
-
-randomized_result = bcSequence.get_outputs(value, randomizer)
+randomized_result = RR.get_results(value)
+print "after"
 print randomized_result
+

@@ -75,7 +75,7 @@ class BcSequence(BCStat):
         constraints = And(constraints, self.x == self.transform_num(input_of_bc))
         s.add(constraints)
         s.check()
-        print s.model()
+        # print s.model()
         if s.check() == sat:
             return s.model()[self.y]
         else:
