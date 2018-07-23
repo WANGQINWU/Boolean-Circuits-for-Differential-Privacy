@@ -34,8 +34,8 @@ print
 bcSequence.find_solution(bc)
 bcSequence.find_probability()
 
-random = [0, 0, 1]
+random = [0, 0, 0]
 input = 0
 output = bcSequence.get_output_with_random(input, random)
-print 'output with input 0 and random [0, 0, 1]'
+print 'output with input 0 and random [0, 0, 0]'
 print bcSequence.transform_bool(output)

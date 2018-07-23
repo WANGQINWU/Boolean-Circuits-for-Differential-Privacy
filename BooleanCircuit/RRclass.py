@@ -22,11 +22,31 @@ class RRclass():
             seq.append(0)
         return seq
 
-    def get_results(self, input):
+    def get_results_bit_flip(self, input):
 
         randomized_result = self.bcSequence.get_outputs(input, self.Randomizer)
 
         result = []
         for i in randomized_result:
             result.append(self.bcSequence.transform_bool(i))
+
+        while sum(result) != 1:
+            randomized_result = self.bcSequence.get_outputs(input, self.Randomizer)
+
+            result = []
+            for i in randomized_result:
+                result.append(self.bcSequence.transform_bool(i))
+
         return result
+
+    def get_results(self, input):
+        randomized_result = self.bcSequence.get_outputs(input, self.Randomizer)
+
+        result = []
+        for i in randomized_result:
+            result.append(self.bcSequence.transform_bool(i))
+
+        return result
+
+    def get_bcSequence(self):
+        return self.bcSequence

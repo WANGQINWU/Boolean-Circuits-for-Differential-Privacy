@@ -1,7 +1,7 @@
 from z3 import *
 import time
 import threading
-
+from scipy.stats import chi2
 
 class BCStat():
 
@@ -12,23 +12,25 @@ class BCStat():
         self.is_done = False
         self.time = 0
         self.time1 = 0
+        self.s = Solver()
+        self.s.add(self._output_bc)
 
-    def find_solution(self, bc, is_time=False):
+    def find_solution(self, constrain, is_time=False):
         self.total_count = 0
         self.t_lie_count = 0
         self.f_lie_count = 0
         self.is_done = False
         # print "start search"
-        s = Solver()
-        s.add(bc)
+        self.s.push()
+        self.s.add(constrain)
 
         # print "timer"
         start = time.time()
 
-        while s.check() == sat and not self.is_done:
-            s.check()
+        while self.s.check() == sat and not self.is_done:
+            self.s.check()
             self.total_count += 1
-            m = s.model()
+            m = self.s.model()
             # print m
             # to get multiple solutions and avoid get the same solution all the time
             try:
@@ -55,9 +57,9 @@ class BCStat():
             else:
                 self.t_lie_count += 2 ** (self._length + 2 - len(m))
 
-            s.add(orsol)
+            self.s.add(orsol)
 
-            if s.check() == unsat:
+            if self.s.check() == unsat:
                 self.is_done = True
 
             # for c in s.assertions():
@@ -70,6 +72,8 @@ class BCStat():
             self.time1 = end - start
         else:
             self.time = end - start
+
+        self.s.pop()
 
     def find_solution_thread(self, t_bc, f_bc):
         t1 = threading.Thread(target=self.find_solution, args=(t_bc,))
@@ -90,11 +94,13 @@ class BCStat():
         # return Q(self.f_lie_count, 2 ** self._length)
         # return float(self.f_lie_count) / (2 ** self._length)
         if self.f_lie_count >= self.t_lie_count:
-            # print self.f_lie_count
+            print "f_lie_count"
+            print self.f_lie_count
             return float(self.f_lie_count) / (2 ** self._length)
         else:
-            # print self.t_lie_count
-            return float(self.t_lie_count) / (2 ** self._length)
+            print "t_lie_count"
+            print self.t_lie_count
+            return float(self.f_lie_count) / (2 ** self._length)
 
     def find_epsilon(self):
 
@@ -119,3 +125,34 @@ class BCStat():
 
     def get_total(self):
         return self.f_lie_count*2
+
+    def LocalGenRRGOF(self, alpha, epsilon, input, M_rr):
+        output = M_rr.get_results(input)
+        print output
+        p1 = float(1)/2
+        p0 = float(1)/2
+
+        print p1
+
+        p_head_0 = (1/(math.exp(epsilon)+1)) * (math.exp(epsilon)*p0+(1-p0))
+        p_head_1 = (1/(math.exp(epsilon)+1)) * (math.exp(epsilon)*p1+(1-p1))
+        print p_head_0
+
+        h_head_0 = output.count(0)
+        h_head_1 = output.count(1)
+
+        print h_head_0
+
+        q = (h_head_0-len(input)*p_head_0) ** 2 / (len(input)*p_head_0) +\
+            (h_head_1-len(input)*p_head_1) ** 2 / (len(input)*p_head_1)
+
+        print (h_head_0-len(input)*p_head_0) ** 2 / (len(input)*p_head_0)
+
+        chi = chi2.isf(q=alpha, df=1)
+
+        if q > chi:
+            print "H0 holds fail"
+            print q
+        else:
+            print "H0 holds"
+            print q

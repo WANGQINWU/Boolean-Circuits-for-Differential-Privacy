@@ -3,19 +3,21 @@ from BC_Stat import BCStat
 
 
 class BcSequence(BCStat):
-    r = []
     # input x and output y
     x, y = Bools('x y')
 
     def __init__(self, sequence):
+        self.r = []
+
         self._sequence = sequence
         self._length = len(self._sequence)
         self.r = self.getri()
         self._output_bc = self.producebc()
-        self._bc = self.for_lie(self._output_bc)
-        self.t_bc = self.for_t_lie(self._output_bc)
-        self.f_bc = self.for_f_lie(self._output_bc)
+        self._bc = self.for_lie()
+        self.t_bc = self.for_t_lie()
+        self.f_bc = self.for_f_lie()
         BCStat.__init__(self)
+
 
     def getri(self):
 
@@ -43,14 +45,14 @@ class BcSequence(BCStat):
 
         return bc == self.y
 
-    def for_lie(self, bc):
-        return bc, self.y != self.x
+    def for_lie(self):
+        return self.y != self.x
 
-    def for_t_lie(self, bc):
-        return bc, self.y != self.x, self.x == True
+    def for_t_lie(self):
+        return self.y != self.x, self.x == True
 
-    def for_f_lie(self, bc):
-        return bc, self.y != self.x, self.x == False
+    def for_f_lie(self):
+        return self.y != self.x, self.x == False
 
 
     # Selector
@@ -68,16 +70,17 @@ class BcSequence(BCStat):
         return self.f_bc
 
     def get_output_with_random(self, input_of_bc, random):
-        s = Solver();
 
-        s.add(self._output_bc)
+        self.s.push()
         constraints = And([self.r[i] == self.transform_num(random[i]) for i in range(len(random))])
         constraints = And(constraints, self.x == self.transform_num(input_of_bc))
-        s.add(constraints)
-        s.check()
-        # print s.model()
-        if s.check() == sat:
-            return s.model()[self.y]
+        self.s.add(constraints)
+        self.s.check()
+
+        if self.s.check() == sat:
+            y = self.s.model()[self.y]
+            self.s.pop()
+            return y
         else:
             return 'error'
 
@@ -86,6 +89,7 @@ class BcSequence(BCStat):
         for i in range(len(intputs_of_bc)):
             random_seq = randomizer.get_random_seq()
             output.append(self.get_output_with_random(intputs_of_bc[i], random_seq))
+
         return output
 
     def get_out_bc(self):

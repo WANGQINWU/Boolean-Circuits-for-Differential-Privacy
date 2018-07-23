@@ -19,7 +19,9 @@ print value
 epsilon = math.exp(math.log(3))
 RR = RRclass(epsilon)
 
-randomized_result = RR.get_results(value)
+randomized_result = RR.get_results_bit_flip(value)
 print "after"
 print randomized_result
+print
 
+RR.bcSequence.LocalGenRRGOF(0.05, math.log(7), [0, 0, 0, 0, 1], RR)
