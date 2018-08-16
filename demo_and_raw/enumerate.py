@@ -1,9 +1,9 @@
 from z3 import *
 import sys
 
-#usage: python filename.py n
+# usage: python filename.py n
 # n is number of OR and AND chain size
-#result: return synatic of bc with n OR and AND
+# result: return synatic of bc with n OR and AND
 
 #functions
 #produce Ri
@@ -41,7 +41,7 @@ def getSequence(X,R,Sequence):
     chain_one = X
     chain_two = X
 
-    for i,s in enumarte(Sequence):
+    for i,s in enumerate(Sequence):
         if s == 0:
             chain_one=Or(chain_one,R[i])
             chain_two=AND(chain_two,R[i])

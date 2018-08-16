@@ -15,7 +15,7 @@ class BCStat():
         self.s = Solver()
         self.s.add(self._output_bc)
 
-    def find_solution(self, constrain, is_time=False):
+    def find_solution(self, constrain):
         self.total_count = 0
         self.t_lie_count = 0
         self.f_lie_count = 0
@@ -68,22 +68,12 @@ class BCStat():
 
         # print "finished search solution"
         end = time.time()
-        if is_time:
-            self.time1 = end - start
-        else:
-            self.time = end - start
+
+        self.time = end - start
 
         self.s.pop()
 
-    def find_solution_thread(self, t_bc, f_bc):
-        t1 = threading.Thread(target=self.find_solution, args=(t_bc,))
-        is_time = True
-        t2 = threading.Thread(target=self.find_solution, args=(f_bc, is_time))
-        t1.start()
-        t2.start()
-        t1.join()
-        t2.join()
-
+    # find probability with found count
     def find_probability(self):
         # print self.f_lie_count
         # print "lie count"
@@ -118,14 +108,14 @@ class BCStat():
             return 0
 
     def gettime(self):
-        if self.time1 < self.time:
-            return self.time
-        else:
-            return self.time1
+        
+        return self.time
+
 
     def get_total(self):
         return self.f_lie_count*2
 
+    # hypo testing - chi square
     def LocalGenRRGOF(self, alpha, epsilon, input, M_rr):
         output = M_rr.get_results(input)
         print output

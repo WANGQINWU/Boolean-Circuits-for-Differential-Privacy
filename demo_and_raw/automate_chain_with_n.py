@@ -1,8 +1,23 @@
 from z3 import *
 import sys
 
-#functions
+# usage: python filename.py n
+# n is number of OR and AND chain size
+# result: return synatic of bc with n OR and AND
+
+# functions
+# produce Ri
+
+
+def getRi(n):
+    R=[]
+    for i in range(n):
+        R.append(Bool('r%s' % i))
+    return R
+
 # statement p always true, not p always false (unsat)
+
+
 def proveforall(f):
     s = Solver()
     s.add(Not(f))
@@ -11,17 +26,21 @@ def proveforall(f):
     else:
         print "failed to prove"
 
-#OR chain
+# OR chain
+
+
 def getOR(X,R,n):
     OR=X
-    for i in range(2):
+    for i in range(n):
         OR=Or(OR,R[i])
     return Not(OR)
 
-#AND chain
+# AND chain
+
+
 def getAND(X,R,n):
     AND=X
-    for i in range(2):
+    for i in range(n):
         AND=And(AND,R[i])
     return Not(AND)
 
@@ -40,42 +59,36 @@ def getMUX(X,OR,AND):
     return MUX
 ##############
 
-print(sys.argv[1:])
+if(len(sys.argv)<2):
+    print "plz enter length for OR and AND chain"
+    sys.exit()
 
-R = [ Bool('r%s' % i) for i in range(2) ]
+#print (type(sys.argv[1]))
+n=int(sys.argv[1])
+print type(n)
+
+#Random Ri
+R = [ Bool('r%s' % i) for i in range(n) ]
 print "printing elements in R"
 print R
 
+#R=getRi(n)
+#print R
+
+#input X, and output Y
 X,Y = Bools('x y')
 
-print "printing elements in OR"
-OR=getOR(X,R,2)
-print OR
+OR=getOR(X,R,n)
 
-print "printing elements in AND"
-AND=getAND(X,R,2)
-print AND
+AND=getAND(X,R,n)
 
-print "printing elements in MUX"
 MUX=getMUX(X,OR,AND)
 print MUX
 
-s = Solver()
-s.add(MUX==Y,X==False,R[0]==False,R[1]==False)
-
+s=Solver()
+s.add(MUX==Y,Y==Not(X))
 s.check()
-m = s.model()
+m=s.model()
 print m
 
-#X=True
-R[0]=False
-R[1]=False
 
-OR=getOR(X,R,2)
-AND=getAND(X,R,2)
-MUX=getMUX(X,OR,AND)
-
-statement=(MUX==Not(X))
-
-proveforall(statement)
-proveforall(OR==Not(X))
